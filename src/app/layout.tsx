@@ -24,7 +24,7 @@ const sourceSans = Source_Sans_3({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://physiocuro.com'),
+  metadataBase: new URL("https://physiocuro.com"),
   title: "Physiocuro – Advanced Physiotherapy Clinic in Dombivli East",
   description:
     "Discover personalized physiotherapy care at Physiocuro, Dombivli East. We specialize in orthopedic rehab, post-surgical recovery, and chronic pain relief.",
@@ -60,7 +60,8 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Physiocuro – Advanced Physiotherapy Clinic in Dombivli East",
-    description: "Discover personalized physiotherapy care at Physiocuro, Dombivli East. We specialize in orthopedic rehab, post-surgical recovery, and chronic pain relief.",
+    description:
+      "Discover personalized physiotherapy care at Physiocuro, Dombivli East. We specialize in orthopedic rehab, post-surgical recovery, and chronic pain relief.",
     url: "https://physiocuro.com",
     siteName: "Physiocuro",
     locale: "en_US",
@@ -77,7 +78,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Physiocuro – Advanced Physiotherapy Clinic in Dombivli East",
-    description: "Discover personalized physiotherapy care at Physiocuro, Dombivli East. We specialize in orthopedic rehab, post-surgical recovery, and chronic pain relief.",
+    description:
+      "Discover personalized physiotherapy care at Physiocuro, Dombivli East. We specialize in orthopedic rehab, post-surgical recovery, and chronic pain relief.",
     images: ["/Logo-with-bg.png"],
   },
   robots: {
@@ -86,9 +88,9 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
 };
@@ -106,6 +108,20 @@ export default function RootLayout({
       <body
         className={`${rajdhani.className} ${gemunuLibre.variable} ${sourceSans.variable} antialiased font-rajdhani`}
       >
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-SV53V30DBY"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-SV53V30DBY');
+          `}
+        </Script>
+
         <FontAwesome />
         {children}
       </body>

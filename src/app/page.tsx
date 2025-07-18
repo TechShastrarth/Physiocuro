@@ -1,3 +1,5 @@
+'use client';
+
 import React from "react";
 import Card from "@/components/Card";
 import ServiceCard from "@/components/ServiceCard";
@@ -7,7 +9,7 @@ import OpenCard from "@/components/OpenCard";
 import AnimatedCounter from "@/components/AnimatedCounter";
 import { Navbar } from "@/components";
 
-// Server-side rendered page for better SEO and page source visibility
+// Client-side rendered page optimized for static export and SEO
 export default function Home() {
   return (
     <main className="max-w-screen min-h-screen font-rajdhani scroll-smooth text-[#074264]">
