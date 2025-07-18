@@ -1,5 +1,6 @@
 // Export all components for easy importing
 export { default as Aboutus } from './Aboutus';
+export { default as AnimatedCounter } from './AnimatedCounter';
 export { default as Card } from './Card';
 export { default as DocCard } from './DocCard';
 export { default as Footer } from './Footer';

@@ -4,6 +4,7 @@ import ServiceCard from "@/components/ServiceCard";
 import GoogleReviewWidget from "@/components/GoogleReviewWidget";
 import Footer from "@/components/Footer";
 import OpenCard from "@/components/OpenCard";
+import AnimatedCounter from "@/components/AnimatedCounter";
 import { Navbar } from "@/components";
 
 // Server-side rendered page for better SEO and page source visibility
@@ -33,7 +34,8 @@ export default function Home() {
         {/* Hero Text on Video */}
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
-            Redefining <span className="text-[#4DB6AC]">Recovery Restoring</span> Life
+            Redefining{" "}
+            <span className="text-[#4DB6AC]">Recovery Restoring</span> Life
           </h1>
           <p className="text-lg md:text-xl lg:text-2xl mb-8 max-w-3xl">
             Restore your mobility, reduce pain, and get back to what you love
@@ -51,7 +53,7 @@ export default function Home() {
 
         {/* Social Media Floater at bottom center */}
         <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 z-10">
-          <div className="flex space-x-6 bg-black/10 rounded-full px-6 py-3">
+          <div className="flex space-x-12 bg-black/10 rounded-full px-6 py-3">
             <a
               href="mailto:info@physiocuro.com"
               className="text-white hover:text-[#4DB6AC] transition-colors duration-300"
@@ -123,28 +125,50 @@ export default function Home() {
       </section>
 
       {/* Statistics Section */}
-      <section className="bg-[url('/review-bg.png')] bg-fixed bg-cover bg-center bg-no-repeat bg-opacity-[90%] h-auto text-white text-center py-10">
-        <h2 className="sm:text-4xl text-2xl font-semibold mb-8">
-          <span className="text-[#FF5E5B] underline">Till date</span>, we have
+      <section className="exp bg-[url('/review-bg.png')] bg-fixed bg-cover bg-center bg-no-repeat bg-opacity-[90%] h-auto text-white text-center py-10">
+        <h1 className="sm:text-4xl text-2xl font-semibold">
+          <span className="text-[#FF5E5B] underline">Till date</span> , we have
           seen an overwhelming response to our treatment
-        </h2>
+        </h1>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto px-4">
-          <div className="text-center">
-            <div className="text-5xl lg:text-7xl font-bold mb-2">1200+</div>
-            <div className="text-xl lg:text-2xl font-medium">Happy Patients</div>
+        <div className="sm:grid sm:grid-cols-2 sm:grid-rows-2 mx-20 my-10">
+          <div
+            data-aos="fade"
+            className="border-r-2 border-gray-300 sm:border-b-0 border-b-2 border-opacity-[10%] py-20 px-10 flex flex-col items-center gap-4 justify-center"
+          >
+            <h1 className="text-7xl font-bold flex items-center">
+              <AnimatedCounter end={1200} suffix="+" duration={2500} />
+            </h1>
+            <h2 className="text-2xl font-medium">Happy Patients</h2>
           </div>
-          <div className="text-center">
-            <div className="text-5xl lg:text-7xl font-bold mb-2">100+</div>
-            <div className="text-xl lg:text-2xl font-medium">Locations Served</div>
+          <div
+            data-aos="fade"
+            className="border-l-2 border-gray-300 py-10 border-opacity-[10%]  px-10 flex flex-col items-center justify-center "
+          >
+            <h1 className="text-7xl font-bold">
+              <AnimatedCounter end={100} suffix="+" duration={2000} />
+            </h1>
+            <h2 className="text-2xl font-medium">
+              <span className="">Locations Served</span>
+            </h2>
           </div>
-          <div className="text-center">
-            <div className="text-5xl lg:text-7xl font-bold mb-2">10+</div>
-            <div className="text-xl lg:text-2xl font-medium">Clinics</div>
+          <div
+            data-aos="fade"
+            className="row-start-2 border-t-2 border-r-2 border-opacity-[10%] border-gray-300 py-10 px-10 flex flex-col items-center justify-center"
+          >
+            <h1 className="text-7xl font-bold">
+              <AnimatedCounter end={10} suffix="+" duration={1500} />
+            </h1>
+            <h2 className="text-2xl font-medium">Clinics</h2>
           </div>
-          <div className="text-center">
-            <div className="text-5xl lg:text-7xl font-bold mb-2">50+</div>
-            <div className="text-xl lg:text-2xl font-medium">Physiotherapists</div>
+          <div
+            data-aos="fade"
+            className="row-start-2 border-t-2 border-l-2 border-opacity-[10%] border-gray-300 py-10 px-10 flex flex-col items-center justify-center"
+          >
+            <h1 className="text-7xl font-bold">
+              <AnimatedCounter end={50} suffix="+" duration={1800} />
+            </h1>
+            <h2 className="text-2xl font-medium">Physiotherapists</h2>
           </div>
         </div>
       </section>
@@ -155,32 +179,44 @@ export default function Home() {
           <h2 className="text-4xl font-bold text-center mb-10">Our Services</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <ServiceCard
-              icon={<i className="fa-solid fa-notes-medical text-green-600 text-4xl mb-2"></i>}
+              icon={
+                <i className="fa-solid fa-notes-medical text-green-600 text-4xl mb-2"></i>
+              }
               heading="ACL Rehabilitation"
               description="Helps you get strength and movement back after an ACL injury."
             />
             <ServiceCard
-              icon={<i className="fa-solid fa-notes-medical text-green-600 text-4xl mb-2"></i>}
+              icon={
+                <i className="fa-solid fa-notes-medical text-green-600 text-4xl mb-2"></i>
+              }
               heading="Acupuncture"
               description="Traditional acupuncture therapy for pain relief and wellness."
             />
             <ServiceCard
-              icon={<i className="fa-solid fa-notes-medical text-green-600 text-4xl mb-2"></i>}
+              icon={
+                <i className="fa-solid fa-notes-medical text-green-600 text-4xl mb-2"></i>
+              }
               heading="Cupping Therapy"
               description="Ancient therapy technique for muscle recovery and pain relief."
             />
             <ServiceCard
-              icon={<i className="fa-solid fa-notes-medical text-green-600 text-4xl mb-2"></i>}
+              icon={
+                <i className="fa-solid fa-notes-medical text-green-600 text-4xl mb-2"></i>
+              }
               heading="Advanced Electrotherapy"
               description="Modern electrotherapy treatments for enhanced recovery."
             />
             <ServiceCard
-              icon={<i className="fa-solid fa-notes-medical text-green-600 text-4xl mb-2"></i>}
+              icon={
+                <i className="fa-solid fa-notes-medical text-green-600 text-4xl mb-2"></i>
+              }
               heading="Manual Therapy"
               description="Hands-on treatment techniques for improved mobility."
             />
             <ServiceCard
-              icon={<i className="fa-solid fa-notes-medical text-green-600 text-4xl mb-2"></i>}
+              icon={
+                <i className="fa-solid fa-notes-medical text-green-600 text-4xl mb-2"></i>
+              }
               heading="Dry Needling"
               description="Targeted treatment for trigger points and muscle tension."
             />
@@ -196,102 +232,61 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About Section */}
-      <section className="py-16 px-4 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-10">About Physiocuro</h2>
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h3 className="text-2xl font-semibold mb-4">Expert Physiotherapy Care</h3>
-              <p className="text-lg text-gray-600 mb-6">
-                At Physiocuro, we provide comprehensive physiotherapy services with a focus on 
-                personalized treatment plans. Our experienced team uses advanced techniques to 
-                help you recover faster and prevent future injuries.
-              </p>
-              <ul className="space-y-3 text-gray-600">
-                <li className="flex items-center">
-                  <i className="fas fa-check text-[#4DB6AC] mr-3"></i>
-                  Orthopedic Rehabilitation
-                </li>
-                <li className="flex items-center">
-                  <i className="fas fa-check text-[#4DB6AC] mr-3"></i>
-                  Post-Surgical Recovery
-                </li>
-                <li className="flex items-center">
-                  <i className="fas fa-check text-[#4DB6AC] mr-3"></i>
-                  Sports Injury Treatment
-                </li>
-                <li className="flex items-center">
-                  <i className="fas fa-check text-[#4DB6AC] mr-3"></i>
-                  Chronic Pain Management
-                </li>
-              </ul>
-            </div>
-            <div>
-              <img 
-                src="/about-img.jpg" 
-                alt="Physiotherapy treatment at Physiocuro clinic in Dombivli East" 
-                className="rounded-lg shadow-lg w-full"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Location Section */}
-      <section className="bg-[url('/location-bg.png')] bg-cover bg-center bg-no-repeat bg-fixed h-auto py-16 lg:px-20 px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="lg:flex lg:items-center lg:justify-between">
-            <div className="lg:w-1/2 text-white lg:pr-10">
-              <h2 className="text-4xl lg:text-6xl font-bold mb-6">
-                <span className="text-[#49B649]">We</span> Are At
-              </h2>
-              <p className="text-lg mb-8">
-                We are proud to serve our communities with accessible and expert
-                physiotherapy care across multiple locations. You can visit us at
-                Pain Clinic Physiotherapy and Rehabilitation Center in Karwar,
-                Karnataka, or at the Spine Clinic Physiotherapy and Neuro
-                Development Center in Majali, Karnataka. For those in Maharashtra,
-                PhysioCuro Physiotherapy & Rehabilitation Center in Dombivli
-                offers comprehensive rehabilitation services. Each center is
-                equipped with modern facilities and experienced professionals
-                dedicated to helping you move better and live pain-free.
-              </p>
-            </div>
-            <div className="lg:w-1/2 grid grid-cols-1 md:grid-cols-2 gap-6 mt-8 lg:mt-0">
-              <a href="https://maps.app.goo.gl/tyP7vETT8Zf2FFpH6" className="block">
-                <Card
-                  heading="PhysioCuro Physiotherapy & Rehabilitation Center"
-                  description="Dombivli, Maharashtra"
-                />
-              </a>
-              <a href="https://maps.app.goo.gl/ggZvNQMYD8M2Q9A18" className="block">
-                <Card
-                  heading="Pain Clinic Physiotherapy and Rehabilitation Center"
-                  description="Karwar, Karnataka"
-                />
-              </a>
-              <a href="https://maps.app.goo.gl/T4YruYGWmcYmyNmNA" className="block md:col-span-2">
-                <Card
-                  heading="Spine Clinic Physiotherapy, Neuro Development Center"
-                  description="Majali, Karnataka"
-                />
-              </a>
-            </div>
-          </div>
+      <section className="bg-[url('/location-bg.png')] bg-cover bg-center bg-no-repeat bg-fixed h-auto py-16 lg:px-20 px-4 lg:flex-row flex-col flex lg:items-center lg:justify-center">
+        <div className="text-justify lg:w-1/2 text-white lg:pl-10">
+          <h1 className="text-6xl font-bold text-white">
+            <span className="text-[#49B649]">We</span> Are At
+          </h1>
+          <article>
+            <p>
+              We are proud to serve our communities with accessible and expert
+              physiotherapy care across multiple locations. You can visit us at
+              Pain Clinic Physiotherapy and Rehabilitation Center in Karwar,
+              Karnataka, or at the Spine Clinic Physiotherapy and Neuro
+              Development Center in Majali, Karnataka. For those in Maharashtra,
+              PhysioCuro Physiotherapy & Rehabilitation Center in Dombivli
+              offers comprehensive rehabilitation services. Each center is
+              equipped with modern facilities and experienced professionals
+              dedicated to helping you move better and live pain-free.
+            </p>
+          </article>
+        </div>
+        <div className="flex sm:flex-row max-w-full flex-col items-center lg:mx-10 lg:mt-0 mt-5 gap-10 w-full ">
+          {/* <OpenCard/> */}
+
+          <a href="https://maps.app.goo.gl/tyP7vETT8Zf2FFpH6">
+            <Card
+              heading="PhysioCuro Physiotherapy & Rehabilitation Center"
+              description="Dombivli, Maharashtra"
+            />
+          </a>
+          <a href="https://maps.app.goo.gl/ggZvNQMYD8M2Q9A18">
+            <Card
+              heading="Pain Clinic Physiotherapy and Rehabilitation Center"
+              description="Karwar,Karnataka"
+            />
+          </a>
+          <a href="https://maps.app.goo.gl/T4YruYGWmcYmyNmNA">
+            <Card
+              heading="Spine Clinic Physiotherapy, Neuro Development Center"
+              description="Majali, Karnataka"
+            />
+          </a>
         </div>
       </section>
-
       {/* Google Reviews Section */}
       <section className="py-16 px-4 bg-gray-100">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-10">What Our Patients Say</h2>
+          <h2 className="text-4xl font-bold text-center mb-10">
+            What Our Patients Say
+          </h2>
           <div className="text-center">
             <p className="text-lg text-gray-600 mb-8">
-              Read authentic reviews from our satisfied patients who have experienced 
-              exceptional care at Physiocuro.
+              Read authentic reviews from our satisfied patients who have
+              experienced exceptional care at Physiocuro.
             </p>
-            <GoogleReviewWidget />
+            {/* <GoogleReviewWidget /> */}
           </div>
         </div>
       </section>

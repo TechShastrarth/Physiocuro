@@ -76,21 +76,21 @@ export default function ContactUsPage() {
             <input
               type="text"
               name="user_name"
-              className=" bg-white border-[#6C6C6C] border-2 rounded-2xl px-4 lg:text-xl sm:text-lg text-sm font-medium border-opacity-[16%] shadow-xl  w-full h-[54px] "
+              className=" bg-white border-[#6C6C6C]/60 border-2 rounded-2xl px-4 lg:text-xl sm:text-lg text-sm font-medium border-opacity-[16%] shadow-xl  w-full h-[54px] "
               placeholder="Name"
               required
             />
             <input
               type="email"
               name="user_email"
-              className=" bg-white border-[#6C6C6C] border-2 rounded-2xl px-4 lg:text-xl sm:text-lg text-sm font-medium border-opacity-[16%] shadow-xl  w-full h-[54px] "
+              className=" bg-white border-[#6C6C6C]/60 border-2 rounded-2xl px-4 lg:text-xl sm:text-lg text-sm font-medium border-opacity-[16%] shadow-xl  w-full h-[54px] "
               placeholder="Email"
               required
             />
             <input
               type="tel"
               name="user_phone"
-              className=" bg-white border-[#6C6C6C] border-2 rounded-2xl px-4 lg:text-xl sm:text-lg text-sm font-medium border-opacity-[16%] shadow-xl  w-full h-[54px] "
+              className=" bg-white border-[#6C6C6C]/60 border-2 rounded-2xl px-4 lg:text-xl sm:text-lg text-sm font-medium border-opacity-[16%] shadow-xl  w-full h-[54px] "
               placeholder="Phone Number"
               required
             />
