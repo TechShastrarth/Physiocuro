@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+/* Font variables are automatically injected by Next.js font system */
+:root {
+  --font-rajdhani: "Rajdhani", sans-serif;
+  --font-gemunu: "Gemunu Libre", sans-serif;
+  --font-source-sans: "Source Sans 3", sans-serif;
+}
+
+/* Base styles to ensure consistent font application */
+html,
+body {
+  font-family: var(--font-rajdhani), sans-serif;
+}
+
+/* Utility classes for different fonts */
+.font-rajdhani {
+  font-family: var(--font-rajdhani), sans-serif;
+}
+
+.font-gemunu {
+  font-family: var(--font-gemunu), sans-serif;
+}
+
+.font-source-sans {
+  font-family: var(--font-source-sans), sans-serif;
+}
+
+/* Custom scrollbar styles */
+.scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: #4DB6AC #e5e7eb;
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: #e5e7eb;
+  border-radius: 3px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: #4DB6AC;
+  border-radius: 3px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: #3a9691;
+}
+
+.scrollbar-thumb-\[#4DB6AC\] {
+  scrollbar-color: #4DB6AC #e5e7eb;
+}
+
+.scrollbar-track-gray-200 {
+  scrollbar-color: #4DB6AC #e5e7eb;
+}
+
+.hover\:scrollbar-thumb-\[#3a9691\]:hover {
+  scrollbar-color: #3a9691 #e5e7eb;
+}
