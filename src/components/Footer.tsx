@@ -72,7 +72,7 @@ const Footer: React.FC<FooterProps> = () => {
               </Link>
             </ul>
             <ul className="flex-col flex">
-              <Link href="/contact" className="hover:underline">
+              <Link href="/contact-us" className="hover:underline">
                 <li>Book Now</li>
               </Link>
               <Link href="/doctors-info" className="hover:underline">
