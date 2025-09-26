@@ -67,7 +67,7 @@ function DocCard(): React.JSX.Element {
         "Extensive clinical experience in clinic and hospital settings, specializing in orthopedic rehabilitation, women's health physiotherapy, and sports injury management with evidence-based treatment approaches.",
     },
     {
-      image: "/Dr Kinal Kothari.PNG",
+      image: "/Dr Kinal Kothari.png",
       name: "Dr. Kinal Kothari",
       designation: "Master's in Musculoskeletal & Sports Injuries | 8+ Years Experience",
       details:
